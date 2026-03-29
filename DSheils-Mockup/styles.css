@@ -1,0 +1,170 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --nav-bg-left: #558ca9;
+    --nav-bg-right: #6da7be;
+    --hero-bg: #111a22;
+    --hero-text-muted: #5a8496;
+    --hero-highlight: #00e3d3;
+    --section-bg: #b8ddd6;
+    --bottom-bg: #bde5de;
+    --text-dark: #3d4c4a;
+    --btn-bg: #52c5e5;
+}
+
+body {
+    background-color: var(--bottom-bg);
+}
+
+/* ----- Top Element (Non-Sticky) ----- */
+.top-slice {
+    height: 15px; /* Reduced height as requested */
+    background-color: var(--hero-bg);
+    width: 100%;
+}
+
+/* ----- Sticky Navbar ----- */
+.navbar {
+    display: flex;
+    height: 75px;
+    background-color: var(--nav-bg-right);
+    
+    /* Sticky Logic */
+    position: -webkit-sticky; /* Safari support */
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+    background-color: var(--nav-bg-left);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.nav-right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* ----- Hero Section ----- */
+.hero {
+    background-color: var(--hero-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+    gap: 5rem;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero-content h1 {
+    color: var(--hero-text-muted);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .highlight {
+    color: var(--hero-highlight);
+    font-size: 2.8rem;
+}
+
+.hero-content p {
+    color: var(--hero-text-muted);
+    font-size: 1rem;
+}
+
+/* ----- Scholarships Section ----- */
+.scholarships {
+    background-color: var(--section-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    gap: 8rem;
+}
+
+.scholarships-content {
+    text-align: center;
+    max-width: 350px;
+}
+
+.scholarships-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.scholarships-content p {
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: #000;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.scholarships-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ----- Bottom Section ----- */
+.bottom-filler {
+    height: 400px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+    .nav-left { width: 150px; }
+    .hero, .scholarships {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+}
