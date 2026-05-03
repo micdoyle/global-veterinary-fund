@@ -79,15 +79,15 @@
         <div class="form-group">
           <label>Donation Amount</label>
           <div class="amount-presets">
-            <button type="button" class="amount-btn" onclick="selectAmount(this, '25')">$25</button>
+            <button type="button" class="amount-btn" onclick="selectAmount(this, '5')">$5</button>
+            <button type="button" class="amount-btn" onclick="selectAmount(this, '10')">$10</button>
+            <button type="button" class="amount-btn amount-btn-active" onclick="selectAmount(this, '25')">$25</button>
             <button type="button" class="amount-btn" onclick="selectAmount(this, '50')">$50</button>
-            <button type="button" class="amount-btn amount-btn-active" onclick="selectAmount(this, '100')">$100</button>
-            <button type="button" class="amount-btn" onclick="selectAmount(this, '250')">$250</button>
-            <button type="button" class="amount-btn" onclick="selectAmount(this, '500')">$500</button>
+            <button type="button" class="amount-btn" onclick="selectAmount(this, '100')">$100</button>
           </div>
           <div class="amount-custom-wrap">
             <span class="amount-prefix">$</span>
-            <input type="number" id="amount" placeholder="Or enter custom amount" value="100" min="1" />
+            <input type="number" id="amount" placeholder="Or enter custom amount" value="75" min="1" />
           </div>
         </div>
 
@@ -118,7 +118,7 @@
             <input type="text" id="card-expiry" placeholder="MM / YY" maxlength="7" />
           </div>
           <div class="form-group">
-            <label for="card-cvc">CVC</label>
+            <label for="card-cvc">CVC/CVV</label>
             <input type="text" id="card-cvc" placeholder="123" maxlength="3" />
           </div>
         </div>
